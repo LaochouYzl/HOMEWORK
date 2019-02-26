@@ -16,6 +16,8 @@ public class BaseServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+        	request.setCharacterEncoding("utf-8");
+        	response.setCharacterEncoding("UTF-8");
             // 获取请求方法
             String methodName = request.getParameter("method");
             // 获取指定类的字节码对象

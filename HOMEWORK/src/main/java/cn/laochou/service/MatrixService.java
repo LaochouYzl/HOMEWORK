@@ -99,7 +99,25 @@ public class MatrixService {
 			}
 		}
 		PrintUtils.printTwoDimensionalArray(frist);
-		return 0;
+		return getRankValue(frist);
+	}
+	
+	private int getRankValue(double[][] frist) {
+		boolean isAllZero = true;
+		int result = 0;
+		for(int i = 0; i < frist.length; i++) {
+			for(int j = 0; j < frist[0].length; j++) {
+				if(frist[i][j] !=  0.0) {
+					isAllZero = false;
+					break;
+				}
+			}
+			if(isAllZero == false) {
+				result++;
+			}
+			isAllZero = true;
+		}
+		return result;
 	}
 	
 	/**
@@ -225,19 +243,17 @@ public class MatrixService {
 	
 	
 	public static void main(String[] args) {
-		double[][] frist = {{1,2, 3}, {2, 1, 3}};
-		double[][] second = {{1, 2}, {1, 2}, {1, 2}};
-		double[][] TestMatrix = {
-	   			   {1, 22, 34,22}, 
-	   			   {1, 11,5,21} ,
-	   			   {0,1,5,11},
-	   			   {7,2,13,19}};
-		double[][] test = {{1,2,3 },  
-		        {2,2,1 },  
-		        {3,4,3 }};
+//		double[][] frist = {{1,2, 3}, {2, 1, 3}};
+//		double[][] second = {{1, 2}, {1, 2}, {1, 2}};
+		double[][] TestMatrix = { {1, 3, 2, 1, 3}, {-1, 1, 0, 1, -1} , {1, 1, 1, 0,
+		 2}, {-1, 3, 1, 2, 0}};
+		/* double[][] TestMatrix = {{1, 2, 1, -2}, {2, 3, 0, -1}, {1, -1, -5, 7}}; */
+//		double[][] test = {{1,2,3 },  
+//		        {2,2,1 },  
+//		        {3,4,3 }};
 //		double[][] result = new MatrixService().multiply(frist, second);																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		
 //		PrintUtils.printTwoDimensionalArray(result);
-//		new MatrixService().getRank(TestMatrix);
-		PrintUtils.printTwoDimensionalArray(new MatrixService().getReverseMartrix(test));
+		System.out.println(new MatrixService().getRank(TestMatrix));
+//		PrintUtils.printTwoDimensionalArray(new MatrixService().getReverseMartrix(test));
 	}
 }

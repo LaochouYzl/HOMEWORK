@@ -62,10 +62,10 @@ public class DBUtils {
 		}
 	}
 	
-	public static void close(ConnectionImpl conn, ClientPreparedStatement ps, ResultSet set) {
+	public static void close(ConnectionImpl conn, ClientPreparedStatement ps, ResultSet rs) {
 		try {
-			if(set != null) {
-				set.close();
+			if(rs != null) {
+				rs.close();
 			}
 			if(ps != null) {
 				ps.close();

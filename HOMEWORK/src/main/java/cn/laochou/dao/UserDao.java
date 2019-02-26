@@ -2,6 +2,8 @@ package cn.laochou.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.mysql.cj.jdbc.ClientPreparedStatement;
 import com.mysql.cj.jdbc.ConnectionImpl;
@@ -28,8 +30,10 @@ public class UserDao {
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				User user = new User();
+				user.setId(rs.getInt("id"));
 				user.setUserName(rs.getString("username"));
 				user.setPassword(rs.getString("password"));
+				user.setType(rs.getInt("type"));
 				return user;
 			}
 		} catch (SQLException e) {
@@ -55,6 +59,32 @@ public class UserDao {
 			DBUtils.close(conn, ps);
 		}
 		return 0;
+	}
+	
+	public List<User> selectAllUser(){
+		ConnectionImpl conn = DBUtils.getConnectionImpl();
+		ClientPreparedStatement ps = null;
+		List<User> list = new ArrayList<User>();
+		ResultSet rs = null;
+		User user = null;
+		try {
+			ps = (ClientPreparedStatement) conn.prepareStatement("select * from user");
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				user = new User();
+				user.setId(rs.getInt("id"));
+				user.setUserName(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
+				user.setEmail(rs.getString("email"));
+				user.setType(rs.getInt("type"));
+				list.add(user);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBUtils.close(conn, ps, rs);
+		}
+		return list;
 	}
 
 }

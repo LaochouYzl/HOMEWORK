@@ -5,7 +5,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登陆页面</title>
 <!-- Custom Theme files -->
-<link href="./Home_files/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="static/Home_files/style.css" rel="stylesheet" type="text/css" media="all">
 <!-- Custom Theme files -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

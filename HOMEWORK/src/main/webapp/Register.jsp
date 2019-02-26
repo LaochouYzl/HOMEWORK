@@ -5,15 +5,15 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>登陆页面</title>
     <!-- Custom Theme files -->
-    <link href="./Home_files/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="static/Home_files/style.css" rel="stylesheet" type="text/css" media="all">
     <!-- Custom Theme files -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta name="keywords" content="Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
     <!--Google Fonts-->
-    <link href="Home_files/css" rel="stylesheet" type="text/css">
-    <link href="Home_files/css(1)" rel="stylesheet" type="text/css">
+    <link href="static/Home_files/css" rel="stylesheet" type="text/css">
+    <link href="static/Home_files/css(1)" rel="stylesheet" type="text/css">
     <!--Google Fonts-->
 </head>
 <body>
@@ -50,7 +50,7 @@
         <h3>用户 &nbsp;<a href="Login.jsp">登陆</a>&nbsp;</h3>
     </div>
 </div>
-<script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="static/jquery/jquery-3.3.1.js"></script>
 <script type="text/javascript">
     function putEmail() {
         var mail = document.getElementById("email").value;
@@ -72,7 +72,7 @@
                 	alert("发送失败");
                 }
             },error:function () {
-                alert("发送错误")
+                alert("发送错误");
             }
         });
     }

@@ -20,7 +20,7 @@ import cn.laochou.utils.EmailUtils;
  * Servlet implementation class UserServlet
  */
 @WebServlet("/user")
-public class UserServlet extends BaseServlet {
+public class UserController extends BaseServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -38,7 +38,11 @@ public class UserServlet extends BaseServlet {
 			if(user != null) {
 				request.getSession().setAttribute("user", user);
 				try {
-					request.getRequestDispatcher("/WEB-INF/Index.jsp").forward(request, response);
+					if(user.getType() == 1) {
+						request.getRequestDispatcher("/Main.jsp").forward(request, response);
+					}else {
+						request.getRequestDispatcher("/Index.jsp").forward(request, response);
+					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

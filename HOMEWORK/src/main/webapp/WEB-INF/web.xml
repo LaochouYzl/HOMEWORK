@@ -4,14 +4,12 @@
   <welcome-file-list>
     <welcome-file>Login.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>MatrixController</display-name>
-    <servlet-name>MatrixController</servlet-name>
-    <servlet-class>cn.laochou.controller.MatrixController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>MatrixController</servlet-name>
-    <url-pattern>/MatrixController</url-pattern>
-  </servlet-mapping>
+  <filter>
+    <filter-name>myFilter</filter-name>
+    <filter-class>cn.laochou.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>myFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>
