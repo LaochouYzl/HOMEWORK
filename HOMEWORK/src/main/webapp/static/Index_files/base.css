@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-family: "Verdana", Geneva, sans-serif;
+    background-color: #222;
+}
+
+ul, li, dl, dt, dd {
+    list-style: none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input,
+textarea, p, blockquote, th, td {
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif;
+}
+
+a {
+    text-decoration: none; /*取消下划线*/
+}
+
+hr {
+    display: block;
+    background-color: transparent;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.9);
+    margin-top: 20px;
+}
+
+pre {
+    font-size: 16px;
+    padding: 5px 0 0;
+    word-wrap: break-word;
+    white-space: pre-wrap; /*强制换行*/
+    white-space: -moz-pre-wrap;
+    overflow: auto;
+    overflow-x: hidden;
+    border: 1px solid #fff;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+/*全局列宽*/
+.col-50 {
+    width: 50%;
+}
+
+.col-100 {
+    width: 100%;
+}
+/*全局浮动*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+/*背景颜色*/
+.bg-red {
+    background-color: #FF5722!important;
+}
+
+.bg-orange {
+    background-color: #FFB800!important;
+}
+
+.bg-green {
+    background-color: #009688!important;
+}
+
+.bg-cyan {
+    background-color: #2F4056!important;
+}
+
+.bg-blue {
+    background-color: #1E9FFF!important;
+}
+
+.bg-black {
+    background-color: #393D49!important;
+}
+
+.bg-gray {
+    background-color: #EEE!important;
+}
+/*字体颜色*/
+.color-red {
+    color: #FF5722;
+}
+
+.color-orange {
+    color: #FFB800;
+}
+
+.color-green {
+    color: #009688;
+}
+
+.color-cyan {
+    color: #2F4056;
+}
+
+.color-blue {
+    color: #1E9FFF;
+}
+
+.color-black {
+    color: #393D49;
+}
+
+.color-gray {
+    color: #EEE;
+}
+/*按钮*/
+.btn {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 18px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn-lg { /* 大按钮*/
+    height: 44px;
+    line-height: 44px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+/*卡片*/
+.card {
+    margin-bottom: 15px;
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+}
+
+.card .card-header {
+    position: relative;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 15px;
+    border-bottom: 1px solid #f6f6f6;
+    color: #333;
+    border-radius: 2px 2px 0 0;
+    font-size: 14px;
+}
+
+.card .card-body {
+    position: relative;
+    padding: 10px 15px;
+    line-height: 24px;
+}
+/*文本域*/
+textarea {
+    display: block;
+    width: 100%;
+    padding: 5px 0 0;
+    height: 68px;
+    line-height: 20px;
+    border: none;
+    overflow: scroll;
+    resize: none;
+    background: 0 0;
+}
+/*分页*/
+.paging {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+    font-size: 0;
+}
+
+.paging a, .paging span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #e2e2e2;
+}
+.paging .curr-page{
+    color:#fff;
+    background-color: #1E9FFF!important;
+}
+.paging span {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    color: #333;
+    font-size: 12px;
+}
+/*不可点击*/
+.disabled {
+    border: 1px solid #e6e6e6;
+    background-color: #FBFBFB;
+    color: #d2d2d2 !important;
+    cursor: not-allowed !important;
+}
+
+.w { /*版心的公共类*/
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*头部 begin*/
+.header {
+    width: 90%;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.header .logo {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header .shortcut {
+    width: 50%;
+    height: 60px;
+    line-height: 60px;
+    float: right;
+}
+
+.shortcut li {
+    float: left;
+    width: 16.6667%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.shortcut li a {
+    color: #bbb;
+    opacity: 0.8;
+}
+
+.shortcut li a:hover {
+    color: #f10215;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.shortcut .login {
+    font-size: 14px;
+}
+
+.shortcut .login span {
+    width: 30px;
+    height: 20px;
+    padding: 6px 18px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #bbb;
+}
+
+.shortcut .user_ico img {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 15px auto;
+}
+
+.menu_list {
+    display: none;
+    height: 120px;
+}
+
+.menu_list:hover .user_info {
+    display: block;
+}
+
+.shortcut .user_info {
+    display: none;
+    font-size: 12px;
+    height: 100px;
+}
+
+.user_info .menu {
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 2px;
+}
+
+.menu dt span {
+    display: block;
+    border-bottom: solid 1px #FF5722;
+    padding: 5px 10px;
+    line-height: 2.4;
+    color: red;
+    text-align: center;
+}
+
+.user_info dd a {
+    display: block;
+    padding: 5px 10px;
+    line-height: 1.8;
+    text-align: center;
+    border-bottom: solid 1px #f2f2f2;
+}
+
+/*头部 end*/
+
+/*中间部分 begin*/
+.content {
+    min-height: 650px;
+    width: 90%;
+    /*background: #444;*/
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.index-content {
+    background: 0;
+    height: 800px;
+}
+
+.content .card {
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.content .card-header {
+    color: #FF5722;
+}
+
+.content .card-body {
+    color: #fff;
+}
+
+.index-content .box {
+    background-color: #1C383F;
+    position: relative;
+    margin: 0 auto;
+    height: 750px;
+}
+
+.box .menus {
+    width: 200px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.menus li {
+    background: rgb(92, 94, 103);
+}
+
+.menus .btn {
+    width: 200px;
+    border-radius: 3px;
+}
+
+.menus .bg {
+    height: 110px !important;
+    background: rgb(0, 159, 233) !important;
+    line-height: 110px !important;
+}
+
+.menus li {
+    width: 200px;
+    height: 70px;
+    background: rgb(92, 94, 103);
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    line-height: 70px;
+}
+
+.box .right {
+    width: 920px;
+    margin-top: 25px;
+    margin-right: 10px;
+    height: 590px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.button a {
+    color: #fff;
+    font-family: "Microsoft YaHei", "Source Sans Pro", Arial, sans-serif;
+    padding: 0px 10px;
+}
+
+/*中间部分 end*/
+/*底部 begin*/
+.footer {
+    height: 100px;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#time {
+    width: 100%;
+    height: 15px;
+    color: #f10215;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: Consolas;
+}
+
+.footer .friend_link {
+    float: left;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.friend_link dl {
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 20px;
+    float: left;
+}
+
+.friend_link dt {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.friend_link dd {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.friend_link a {
+    color: #bbb;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.friend_link a:hover {
+    opacity: 1;
+}
+
+.footer .about {
+    display: inline-block;
+    width: 400px;
+    height: 100%;
+    margin: 40px 40px;
+    color: #bbb;
+    text-align: center;
+}
+
+.about img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+/*底部  end*/

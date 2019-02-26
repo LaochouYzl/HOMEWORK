@@ -1,0 +1,149 @@
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+}
+
+.set-content{
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+}
+.set-title {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    z-index: 9999;
+}
+
+.set-title ul li{
+    float:left;
+    display: block;
+    text-align: center;
+    height: 100%;
+    line-height: 42px;
+    color: #fff;
+    position: static;
+    background: rgba(255,255,255,.1);
+    box-sizing: border-box;
+    border-right: solid 1px #785e9b;
+    cursor: pointer;
+    width: 97px;
+    cursor:pointer;
+}
+.set-title ul .on{
+    background: #1C383F;
+}
+.set-middle{
+    background:#393D49;
+    height: 93%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 15px 17px 0 19px;
+}
+
+.set-middle-item{
+    height: 100%;
+}
+.set-middle-item .content-area{
+    height: 95%;
+    width: 100%;
+}
+.content-area .area-left{
+    display: inline-block;
+    float: left;
+    width: 80%;
+    height:100%;
+}
+.area-left .top-area{
+    width: 100%;
+    height: 30%;
+}
+.top-area .card{
+    height: 100%;
+    background-color: rgba(255,255,255,.1);
+    color: #fff;
+}
+.card .card-header{
+    color:#FF5722;
+}
+.area-left .show-area{
+    width: 100%;
+    min-height: 400px;
+}
+.show-area .card{
+    height: 100%;
+    background-color: rgba(255,255,255,.1);
+    color: #fff;
+}
+.card .card-body{
+    height: 100%;
+}
+.card-body .area-box{
+    min-height: 407px;
+}
+.determinant pre{
+    height:340px;
+}
+
+.area-box .box-title{
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    display: inline-block;
+}
+.box-title .box-title-left{
+    width: 20%;
+    height: 100%;
+}
+.box-title .box-title-right{
+    width: 80%;
+    height: 100%;
+}
+.box-title-right span{
+    border-bottom: 1px solid #f10215;
+}
+
+.area-box .box-body{
+    height: 167px;
+    width: 100%;
+}
+
+.matrix pre{
+    height:160px;
+    margin-bottom: 4px;
+}
+.card-body textarea{
+    border: 1px solid #FF5722;
+    font-size: 16px;
+    min-height: 400px;
+}
+
+.content-area .area-right{
+    display: inline-block;
+    float: right;
+    width: 19%;
+    height:100%;
+}
+.area-right .function-area{
+    margin: 10px;
+    height: 90%;
+    box-sizing: border-box;
+}
+.function-area .button{
+    line-height: 50px;
+    height: 50px;
+    border: 1px solid #009688;
+    color: #fff;
+    margin: 10px auto;
+    text-align: center;
+    opacity: 0.8;
+}
+.function-area .button:hover{
+    opacity: 1;
+}
