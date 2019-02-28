@@ -13,7 +13,7 @@ public class UserService {
 	 * @param password
 	 * @return
 	 */
-	public User checkUser(String userName, String password) {
+	public User checkUser(String userName, String password) {		
 		User user = userDao.selectUserByUserNameAndPassword(userName, password);
 		return user == null ? null : user;
 	}

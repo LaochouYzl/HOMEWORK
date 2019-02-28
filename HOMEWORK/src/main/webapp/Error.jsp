@@ -35,16 +35,18 @@
                   <h1>  What have you done? </h1>
                    <h5> Now Go Back Using Below LInk</h5>
              <% 
+             	
 				String code = (String)request.getAttribute("code");
 				if(code != null){%>
 				<span id="error-link"><%=code%></span>
 				<%}
 			%>
              <% 
+             	request.setCharacterEncoding("utf-8");
 				String msg = (String)request.getAttribute("msg");
              	String content = new String(msg.getBytes("iso8859-1"), "utf-8");
 				if(msg != null){%>
-				<h2><%=content%></h2>
+				<h2><%=msg%></h2>
 				<%}
 			%>
                      
